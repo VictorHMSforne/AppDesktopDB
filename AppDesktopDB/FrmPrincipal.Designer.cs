@@ -52,12 +52,13 @@
             this.btnLocalizar.BackColor = System.Drawing.Color.Transparent;
             this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLocalizar.Location = new System.Drawing.Point(174, 33);
+            this.btnLocalizar.Location = new System.Drawing.Point(174, 36);
             this.btnLocalizar.Name = "btnLocalizar";
-            this.btnLocalizar.Size = new System.Drawing.Size(97, 37);
+            this.btnLocalizar.Size = new System.Drawing.Size(124, 34);
             this.btnLocalizar.TabIndex = 0;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = false;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // txtId
             // 
@@ -80,12 +81,14 @@
             // 
             this.dgvPessoa.AllowUserToAddRows = false;
             this.dgvPessoa.AllowUserToDeleteRows = false;
+            this.dgvPessoa.BackgroundColor = System.Drawing.Color.White;
             this.dgvPessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPessoa.Location = new System.Drawing.Point(6, 487);
+            this.dgvPessoa.Location = new System.Drawing.Point(725, 12);
             this.dgvPessoa.Name = "dgvPessoa";
             this.dgvPessoa.ReadOnly = true;
-            this.dgvPessoa.Size = new System.Drawing.Size(1047, 150);
+            this.dgvPessoa.Size = new System.Drawing.Size(328, 633);
             this.dgvPessoa.TabIndex = 3;
+            this.dgvPessoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoa_CellClick);
             // 
             // label2
             // 
@@ -145,7 +148,7 @@
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnInserir.Location = new System.Drawing.Point(870, 33);
+            this.btnInserir.Location = new System.Drawing.Point(23, 361);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(143, 56);
             this.btnInserir.TabIndex = 10;
@@ -159,12 +162,13 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEditar.Location = new System.Drawing.Point(870, 123);
+            this.btnEditar.Location = new System.Drawing.Point(23, 464);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(143, 59);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -172,12 +176,13 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(870, 216);
+            this.btnExcluir.Location = new System.Drawing.Point(23, 565);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(143, 56);
             this.btnExcluir.TabIndex = 12;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSair
             // 
@@ -185,7 +190,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(870, 411);
+            this.btnSair.Location = new System.Drawing.Point(563, 565);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(143, 58);
             this.btnSair.TabIndex = 13;
@@ -196,9 +201,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AppDesktopDB.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 321);
+            this.pictureBox1.Location = new System.Drawing.Point(495, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(202, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -207,9 +212,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1056, 649);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -224,6 +228,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnLocalizar);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

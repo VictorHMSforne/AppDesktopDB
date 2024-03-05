@@ -51,9 +51,9 @@ namespace AppDesktopDB
             con.Close();
         }
 
-        public void Atualizar(Pessoa pessoa)
+        public void Atualizar(int id, string nome,string idade, string cidade)
         {
-            string sql = "UPDATE pessoa SET nome='" + pessoa.nome + "',idade='" + pessoa.idade + "',cidade='" + pessoa.cidade + "'WHERE id='"+pessoa.id+"'";
+            string sql = "UPDATE pessoa SET nome='" + nome + "',idade='" + idade + "',cidade='" + cidade + "'WHERE id='"+ id +"'";
             if (con.State == ConnectionState.Closed)
             {
                 con.Open();
